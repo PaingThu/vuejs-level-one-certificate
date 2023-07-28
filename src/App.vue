@@ -15,7 +15,7 @@ const movies = reactive(items)
     <!-- This is where your template goes	-->
     <div class="app">
         <div class="movie-list">
-            <div class="movie-item" v-for="(movie, index) in items" :key="index">
+            <div class="movie-item" v-for="(movie, index) in movies" :key="index">
                 <div class="image-wrapper">
                     <img :src="movie.image" alt="">
                 </div>
