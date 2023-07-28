@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.app{
+    @apply flex items-center justify-center bg-slate-800 h-screen;
+}
+.app .movie-list{
+    @apply container flex py-20 items-center justify-center space-x-4;
+}
+.app .movie-list .movie-item{
+    @apply w-[400px] h-auto bg-white flex flex-col justify-start overflow-hidden rounded;
+}
+.app .movie-list .movie-item .image-wrapper{
+    @apply h-[520px] overflow-hidden w-full relative;
+}
+.app .movie-list .movie-item .image img{
+    @apply object-cover object-center h-[600px];
+}
+.app .movie-list .movie-item .content-wrapper{
+    @apply p-4 flex flex-col items-start justify-start space-y-3;
+}
+.app .movie-list .movie-item .content-wrapper .title-wrapper .title{
+    @apply text-2xl;
+}
+.app .movie-list .movie-item .content-wrapper .title-wrapper .genres-wrapper{
+    @apply flex space-x-1;
+}
+.app .movie-list .movie-item .content-wrapper .title-wrapper .genres-wrapper .genre-tag{
+    @apply text-xs bg-indigo-500 text-white py-0.5 px-2 rounded-full;
+}
+.app .movie-list .movie-item .content-wrapper .description-wrapper{
+    @apply h-24 overflow-hidden;
+}
+.app .movie-list .movie-item .content-wrapper .rating-wrapper{
+    @apply flex w-full items-center justify-start shrink-0;
+}
+.app .movie-list .movie-item .content-wrapper .rating-wrapper .rating-text{
+    @apply text-xs mr-2 leading-7;
+}
+.app .movie-list .movie-item .content-wrapper .rating-wrapper .star-icon{
+    @apply h-5 w-5 text-yellow-500;
+}
